@@ -1,11 +1,9 @@
-interface Guitar {
-	id: number;
-	name: string;
-	image: string;
-	description: string;
-	price: number;
+interface GuitarProps {
+	guitar: Guitar;
+	addToCart: (item: Guitar) => void;
 }
-function Guitar({ guitar, addToCart }:{guitar: Guitar, addToCart: (item: Guitar) => void}) {
+
+function Guitar({ guitar, addToCart }: GuitarProps) {
 	const { name, description, price, image } = guitar;
 
 	return (
