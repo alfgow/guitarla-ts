@@ -1,5 +1,12 @@
-function Guitar({ guitar, addToCart }) {
-	const { id, name, description, price, image } = guitar;
+interface Guitar {
+	id: number;
+	name: string;
+	image: string;
+	description: string;
+	price: number;
+}
+function Guitar({ guitar, addToCart }:{guitar: Guitar, addToCart: (item: Guitar) => void}) {
+	const { name, description, price, image } = guitar;
 
 	return (
 		<div className="col-md-6 col-lg-4 my-4 row align-items-center">
