@@ -1,12 +1,24 @@
+import type { CarItem, Guitar } from "../interfaces/interfaces";
+
+type HeaderProps = {
+    cart: CarItem[]
+    removeFromCart: (id: Guitar['id']) => void
+    dicreaseQuantity: (id: Guitar['id']) => void
+    increaseQuantity: (id: Guitar['id']) => void
+    clearCart: () => void
+    isEmpty : boolean
+    cartTotal: number
+}
+
 function Header({
 	cart,
 	removeFromCart,
 	increaseQuantity,
 	dicreaseQuantity,
 	clearCart,
-	isEmpty,
-	cartTotal,
-}) {
+	isEmpty, 
+    cartTotal,
+}: HeaderProps) {
 	return (
 		<header className="py-5 header">
 			<div className="container-xl">

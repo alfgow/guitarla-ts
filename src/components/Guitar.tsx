@@ -1,9 +1,10 @@
+import { Guitar } from "../interfaces/interfaces";
 interface GuitarProps {
 	guitar: Guitar;
 	addToCart: (item: Guitar) => void;
 }
 
-function Guitar({ guitar, addToCart }: GuitarProps) {
+function GuitarI({ guitar, addToCart }: GuitarProps) {
 	const { name, description, price, image } = guitar;
 
 	return (
@@ -35,4 +36,4 @@ function Guitar({ guitar, addToCart }: GuitarProps) {
 	);
 }
 
-export default Guitar;
+export default GuitarI;
